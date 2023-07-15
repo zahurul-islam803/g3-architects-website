@@ -15,6 +15,9 @@
   background: #ff900e;
   padding: 20px 25px;
 }
+.text-color-gray{
+  color: #727272;
+}
 /* Header Related CSS */
 header {
   background: rgba(255, 144, 14, 0.1);
@@ -54,13 +57,42 @@ nav li a {
   font-weight: 700;
   color: #131313;
 }
-.banner-desc {
-  color: #727272;
-}
+
 .banner img{
   margin-top: 20px;
   width: 100%;
 }
+
+/* Main section CSS */
+main{
+  max-width: 1440px;
+  margin: 70px auto;
+}
+/* Teams Related CSS */
+.teams-container{
+  display: flex;
+  align-items: center;
+}
+.teams-gallery{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+.teams-content{
+  padding-left: 70px;
+  padding-right: 70px;
+}
+.teams-title{
+  font-size: 2.8rem;
+}
+.teams-title .quick-list{
+  font-weight: 500;
+}
+.text-color{
+  color: #FF900E;
+  font-weight: 700;
+}
+
 
 /* Responsive related CSS */
 /*  Responsive for Mobile Device */
@@ -68,16 +100,36 @@ nav li a {
   header{
     padding: 20px;
   }
-  nav{
+  nav, .teams-container, nav > ul{
     flex-direction: column;
   }
+  .teams-gallery{
+    grid-template-columns: 1fr;
+  }
+  .banner-title{
+    font-size: 1.5rem;
+  }
+  .teams-title{
+  font-size: 2rem;
+}
+.nav-title{
+  font-size: 1.5rem;
+}
+.teams-content{
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+ 
 }
 /*  Responsive for Medium or Tablet Devices */
 @media screen and (min-width: 577px) and (max-width: 960px) {
   header{
     padding: 50px;
   }
-  nav{
+  nav, .teams-container{
     flex-direction: column;
   }
 }
+
+
