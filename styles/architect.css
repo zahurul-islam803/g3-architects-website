@@ -4,6 +4,8 @@
 /* Common CSS */
 * {
   font-family: "Work Sans", sans-serif;
+  margin: 0;
+  padding: 0;
 }
 .btn-primary {
   border-radius: 8px;
@@ -93,6 +95,45 @@ main {
   color: #ff900e;
   font-weight: 700;
 }
+/* Features Related CSS */
+.features {
+  margin-top: 130px;
+  display: flex;
+  gap: 100px;
+}
+.features .section-title {
+  border-left: 5px solid #ff900e;
+  padding-left: 20px;
+}
+.feature-content .card {
+  padding: 30px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.06);
+}
+.feature-img img {
+  height: 90%;
+  margin-left: 90px;
+}
+.ten-years-badge {
+  border-radius: 8px;
+  background: #ff900e;
+  color: #fff;
+  width: 322px;
+  padding: 40px;
+  text-align: center;
+  position: relative;
+  bottom: 140px;
+}
+.ten-years-badge h2 {
+  font-size: 4rem;
+  margin: 0;
+}
+.ten-years-badge p {
+  font-size: 1.5rem;
+}
+
 /* Facts Related CSS */
 .facts-card-container {
   display: flex;
@@ -118,18 +159,34 @@ main {
   margin-bottom: 10px;
 }
 /* Sponsors Related CSS */
-.sponsors{
+.sponsors {
   text-align: center;
+  margin-top: 15px;
 }
-.sponsors-img-container{
+.sponsors-img-container {
   margin-top: 50px;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   gap: 40px;
 }
-.sponsors-img-container img{
+.sponsors-img-container img {
   width: 140px;
+}
+/* Footer Related CSS */
+.footer{
+  padding: 70px 240px;
+}
+.footer-container{
+  border-radius: 8px;
+  background: #fff4e7;
+}
+.footer-desc {
+  color:  #424242;
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: 400;
+  padding: 38px ;
 }
 
 /* Responsive related CSS */
@@ -141,8 +198,25 @@ main {
   nav,
   .teams-container,
   nav > ul,
-  .facts-card-container, .sponsors-img-container {
+  .facts-card-container,
+  .sponsors-img-container,
+  .features {
     flex-direction: column;
+  }
+  .feature-img img {
+    width: 70%;
+    margin-left: 0;
+  }
+
+  .ten-years-badge {
+    position: static;
+    max-width: 100px;
+  }
+  .ten-years-badge h2 {
+    font-size: 1.5rem;
+  }
+  .ten-years-badge p {
+    font-size: 0.6rem;
   }
   .teams-gallery {
     grid-template-columns: 1fr;
@@ -156,14 +230,26 @@ main {
   .nav-title {
     font-size: 1.5rem;
   }
-  .teams-content, .facts, .sponsors  {
+  .teams-content,
+  .facts,
+  .sponsors,
+  .future {
     padding-left: 20px;
     padding-right: 20px;
   }
   .facts-card-container {
     gap: 10px;
   }
-  
+  .footer{
+  padding: 40px 70px;
+}
+.footer-container{
+  width: 100%;
+  margin-left: 0;
+}
+.footer-desc {
+  padding: 10px;
+}
 }
 /*  Responsive for Medium or Tablet Devices */
 @media screen and (min-width: 577px) and (max-width: 960px) {
@@ -171,7 +257,9 @@ main {
     padding: 50px;
   }
   nav,
-  .teams-container, .sponsors-img-container {
+  .teams-container,
+  .sponsors-img-container,
+  .features {
     flex-direction: column;
   }
 }
